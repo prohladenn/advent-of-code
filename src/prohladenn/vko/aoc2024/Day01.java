@@ -26,8 +26,8 @@ public class Day01 extends AbstractDay<Day01.Input> {
 
     @Override
     protected Day01.Input readInput(Scanner sc) {
-        var left = new ArrayList<Integer>();
-        var right = new ArrayList<Integer>();
+        var left = new ArrayList<Integer>(1000);
+        var right = new ArrayList<Integer>(1000);
 
         while (sc.hasNextInt()) {
             left.add(sc.nextInt());
