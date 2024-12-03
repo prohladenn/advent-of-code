@@ -2,6 +2,7 @@ package prohladenn.vko.aoc2024;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -9,10 +10,7 @@ import java.util.stream.IntStream;
 
 public class Day01 extends AbstractDay<Day01.Input> {
 
-    protected record Input(
-            ArrayList<Integer> left,
-            ArrayList<Integer> right
-    ) {
+    protected record Input(List<Integer> left, List<Integer> right) {
     }
 
     public static void main(String[] args) {

@@ -8,9 +8,7 @@ import java.util.stream.IntStream;
 
 public class Day02 extends AbstractDay<Day02.Input> {
 
-    protected record Input(
-            List<List<Integer>> reportList
-    ) {
+    protected record Input(List<List<Integer>> reportList) {
     }
 
     public static void main(String[] args) {

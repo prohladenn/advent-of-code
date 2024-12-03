@@ -1,6 +1,7 @@
 package prohladenn.vko.aoc2024;
 
 import java.io.InputStream;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class AbstractDay<T> {
@@ -29,6 +30,12 @@ public abstract class AbstractDay<T> {
             System.err.println("An error occurred: " + e.getMessage());
         } finally {
             System.out.println("Duration: " + (System.currentTimeMillis() - start) + " ms");
+        }
+    }
+
+    protected record InputLines(List<String> lines) {
+        static InputLines fromSc(Scanner sc) {
+            return new InputLines(sc.tokens().toList());
         }
     }
 }
