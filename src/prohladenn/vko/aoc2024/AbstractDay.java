@@ -38,4 +38,14 @@ public abstract class AbstractDay<T> {
             return new InputLines(sc.tokens().toList());
         }
     }
+
+    protected record Pair<T, U>(T left, U right) {
+        public T getLeft() {
+            return left;
+        }
+
+        public U getRight() {
+            return right;
+        }
+    }
 }
