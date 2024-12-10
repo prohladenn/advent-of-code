@@ -41,11 +41,15 @@ public abstract class AbstractDay<T> {
     }
 
     protected record Pair<T, U>(T left, U right) {
-        public T getLeft() {
+        public static <T, U> Pair<T, U> of(T left, U right) {
+            return new Pair<>(left, right);
+        }
+
+        public T left() {
             return left;
         }
 
-        public U getRight() {
+        public U right() {
             return right;
         }
     }

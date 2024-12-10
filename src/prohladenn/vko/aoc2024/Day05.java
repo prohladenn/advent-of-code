@@ -60,8 +60,8 @@ public class Day05 extends AbstractDay<Day05.Input> {
 
     private static boolean isCorrectOrder(List<Pair<Integer, Integer>> rules, List<Integer> update) {
         return rules.stream().allMatch(rule -> {
-            int leftIndex = update.indexOf(rule.getLeft());
-            int rightIndex = update.indexOf(rule.getRight());
+            int leftIndex = update.indexOf(rule.left());
+            int rightIndex = update.indexOf(rule.right());
             return leftIndex == -1 || rightIndex == -1 || leftIndex < rightIndex;
         });
     }
@@ -71,8 +71,8 @@ public class Day05 extends AbstractDay<Day05.Input> {
         while (true) {
             boolean changed = false;
             for (var rule : rules) {
-                int leftIndex = sortedUpdate.indexOf(rule.getLeft());
-                int rightIndex = sortedUpdate.indexOf(rule.getRight());
+                int leftIndex = sortedUpdate.indexOf(rule.left());
+                int rightIndex = sortedUpdate.indexOf(rule.right());
                 if (leftIndex != -1 && rightIndex != -1 && leftIndex > rightIndex) {
                     Collections.swap(sortedUpdate, leftIndex, rightIndex);
                     changed = true;
