@@ -27,7 +27,8 @@ public abstract class AbstractDay<T> {
             System.out.println("Part 1: " + solvePart1(input));
             System.out.println("Part 2: " + solvePart2(input));
         } catch (Exception e) {
-            System.err.println("An error occurred: " + e.getMessage());
+            System.err.print("An error occurred: ");
+            e.printStackTrace(System.err);
         } finally {
             System.out.println("Duration: " + (System.currentTimeMillis() - start) + " ms");
         }
