@@ -30,7 +30,6 @@ public class Day06 extends AbstractDay<Day06.Input> {
                 if (pos != -1) {
                     startRow = i - 1;
                     startCol = pos;
-                    map[startRow][startCol] = '.';
                 }
             }
         }
@@ -81,6 +80,7 @@ public class Day06 extends AbstractDay<Day06.Input> {
 
         var visited = new HashSet<Point>();
         visited.add(new Point(row, col));
+        map[row][col] = '.';
 
         while (true) {
             int nextRow = row + dir.getDi();
