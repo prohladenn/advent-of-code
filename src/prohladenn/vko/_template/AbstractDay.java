@@ -1,4 +1,4 @@
-package prohladenn.vko.aoc2024;
+package prohladenn.vko._template;
 
 import java.io.InputStream;
 import java.util.List;
@@ -23,24 +23,35 @@ public abstract class AbstractDay<T> {
         }
 
         try (var sc = new Scanner(inputStream)) {
+            var readStart = System.currentTimeMillis();
             T input = readInput(sc);
+            var readDuration = System.currentTimeMillis() - readStart;
+            System.out.println("Read Input Duration: " + readDuration + " ms\n");
+
+            var solve1Start = System.currentTimeMillis();
             System.out.println("Part 1: " + solvePart1(input));
+            var solve1Duration = System.currentTimeMillis() - solve1Start;
+            System.out.println("Solve Part 1 Duration: " + solve1Duration + " ms\n");
+
+            var solve2Start = System.currentTimeMillis();
             System.out.println("Part 2: " + solvePart2(input));
+            var solve2Duration = System.currentTimeMillis() - solve2Start;
+            System.out.println("Solve Part 2 Duration: " + solve2Duration + " ms\n");
         } catch (Exception e) {
             System.err.print("An error occurred: ");
             e.printStackTrace(System.err);
         } finally {
-            System.out.println("Duration: " + (System.currentTimeMillis() - start) + " ms");
+            System.out.println("Total Duration: " + (System.currentTimeMillis() - start) + " ms");
         }
     }
 
-    protected record InputLines(List<String> lines) {
-        static InputLines fromSc(Scanner sc) {
+    public record InputLines(List<String> lines) {
+        public static InputLines fromSc(Scanner sc) {
             return new InputLines(sc.tokens().toList());
         }
     }
 
-    protected record Pair<T, U>(T left, U right) {
+    public record Pair<T, U>(T left, U right) {
         public static <T, U> Pair<T, U> of(T left, U right) {
             return new Pair<>(left, right);
         }

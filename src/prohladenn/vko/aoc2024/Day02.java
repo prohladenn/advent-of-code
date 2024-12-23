@@ -1,5 +1,7 @@
 package prohladenn.vko.aoc2024;
 
+import prohladenn.vko._template.AbstractDay;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

@@ -1,5 +1,7 @@
 package prohladenn.vko.aoc2024;
 
+import prohladenn.vko._template.AbstractDay;
+
 import java.util.*;
 
 public class Day05 extends AbstractDay<Day05.Input> {

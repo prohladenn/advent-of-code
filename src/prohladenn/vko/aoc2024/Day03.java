@@ -1,6 +1,7 @@
 package prohladenn.vko.aoc2024;
 
-import prohladenn.vko.aoc2024.AbstractDay.InputLines;
+import prohladenn.vko._template.AbstractDay;
+import prohladenn.vko._template.AbstractDay.InputLines;
 
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
