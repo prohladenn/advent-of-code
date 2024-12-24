@@ -1,5 +1,6 @@
 package prohladenn.vko._template;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -20,11 +21,11 @@ public final class Inputs {
         }
     }
 
-    public record InputMatrix(int[][] matrix, int rows, int cols) {
+    public record InputMatrix(char[][] matrix, int rows, int cols) {
         public static InputMatrix fromSc(Scanner sc) {
-            var rows = sc.tokens().map(Integer::parseInt).toList();
-            var matrix = new int[rows.size()][];
-            for (int i = 0; i < rows.size(); i++) matrix[i] = new int[rows.get(i)];
+            var rows = new ArrayList<char[]>();
+            while (sc.hasNextLine()) rows.add(sc.nextLine().toCharArray());
+            var matrix = rows.toArray(new char[0][]);
             return new InputMatrix(matrix, matrix.length, matrix[0].length);
         }
     }
