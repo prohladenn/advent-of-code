@@ -1,7 +1,6 @@
 package prohladenn.vko._template;
 
 import java.io.InputStream;
-import java.util.List;
 import java.util.Scanner;
 
 public abstract class AbstractDay<T> {
@@ -42,12 +41,6 @@ public abstract class AbstractDay<T> {
             e.printStackTrace(System.err);
         } finally {
             System.out.println("Total Duration: " + (System.currentTimeMillis() - start) + " ms");
-        }
-    }
-
-    public record InputLines(List<String> lines) {
-        public static InputLines fromSc(Scanner sc) {
-            return new InputLines(sc.tokens().toList());
         }
     }
 

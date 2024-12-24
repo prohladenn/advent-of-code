@@ -1,11 +1,13 @@
 package prohladenn.vko._template;
 
+import prohladenn.vko._template.Inputs.InputLines;
+
 import java.util.Scanner;
 
-public class NotYetImplementedDay extends AbstractDay<AbstractDay.InputLines> {
+public class NDay extends AbstractDay<InputLines> {
 
     public static void main(String[] args) {
-        new NotYetImplementedDay().run();
+        new NDay().run();
     }
 
     @Override
