@@ -10,3 +10,6 @@ out/
 
 ### Resouces ###
 resources/
+
+### Advent of code ###
+*.txt
