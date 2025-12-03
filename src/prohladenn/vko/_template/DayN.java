@@ -4,15 +4,15 @@ import prohladenn.vko._template.Inputs.InputLines;
 
 import java.util.Scanner;
 
-public class NDay extends AbstractDay<InputLines> {
+public class DayN extends AbstractDay<InputLines> {
 
-    public static void main(String[] args) {
-        new NDay().run();
+    static void main() {
+        new DayN().run();
     }
 
     @Override
     protected String getInputFileName() {
-        return "FILL_ME.txt";
+        return "dayN.txt";
     }
 
     @Override
